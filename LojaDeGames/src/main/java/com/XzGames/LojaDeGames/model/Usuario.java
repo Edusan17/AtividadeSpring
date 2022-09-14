@@ -40,7 +40,7 @@ package com.XzGames.LojaDeGames.model;
 
 		@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 		@JsonIgnoreProperties("usuario")
-		private List<Categoria> categoria;
+		private List<Produto> produto;
 
 		public Long getId() {
 			return this.id;
@@ -82,12 +82,11 @@ package com.XzGames.LojaDeGames.model;
 			this.foto = foto;
 		}
 
-		public List<Categoria> getCategoria() {
-			return this.categoria;
+		public List<Produto> getProduto() {
+			return produto;
 		}
 
-		public void setPostagem(List<Categoria> categoria) {
-			this.categoria = categoria;
+		public void setProduto(List<Produto> produto) {
+			this.produto = produto;
 		}
-		
 	}

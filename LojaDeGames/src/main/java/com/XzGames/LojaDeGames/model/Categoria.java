@@ -27,18 +27,6 @@ public class Categoria {
 	@OneToMany(mappedBy = "categoria", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
 	private List<Produto> produto;
-	
-	@ManyToOne
-	@JsonIgnoreProperties("categoria")
-	private Usuario usuario;
-	
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
 
 	public String getDescricao() {
 		return descricao;
